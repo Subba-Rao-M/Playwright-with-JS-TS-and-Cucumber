@@ -1,0 +1,87 @@
+E2E testing modern web applications, mobile web application and API's
+Mobile native apps not supported but web testing in mobile can be done
+Supported languages - Java Script, TYpeScript, Java, python and .net
+Browsers Supported - CHromium based browsers, firefox, webkit for safari
+By default headless supported and also supports headed mode
+CHromium Browsers - All OS windows, mac
+
+Features:
+Free and Open Source
+Multi-Browser, Multi-language and Multi-OS
+Easy setup and configuration
+Functional Testing, API Testing and Accessibility Testing(3rd party library should be added)
+Bulit in reports available, custom report also can be integrated
+CI and CD is supported, including docker integration
+supports parallel testing in selenium needs to depend on testng
+Autowait - built in - no need to add explicit waits
+Built in assertions available
+Multi tab and multi window supported
+Different types of frames like iframe testing supported, shadow dom elements can be identified
+Parameterization is supported
+Emulate mobile devices - to test application in mobile browser
+Fast execution compare to other tools
+CodeGen is available 
+Traceview - Step by step execution and debugg scripts
+Inspector - TO identify elements
+Good documentation and community support
+Only real time execution is possible in cypress - executing script in browser in real time
+
+
+Installation:
+
+1) Install node.js
+node -v - to check current version in command prompt
+npm will by default install with mode js
+npm - v or npm --version to check the current npm version
+2) Istall VS code editor
+3) Create a folder in your system and open it in VS Code Editor
+4) Istall Playwright(using terminal or VS code plugin)
+node modules - all installed items
+test folder - all tests written here
+package.json - node project management file - to add all dependency modules like POM file 
+config.json - configuration file specific to playwright
+npm Playwright - v - to check playwright version
+
+5) INstall playwright using VS code extention
+Search for playwright exention and install
+
+
+6) To execute tests
+npx playwright test -- all tests under test folder executed
+npx playwrght test - headed -  in head mode
+npm playwrght show-report - to view the report for last execution
+
+7) Creating tests
+all files should have extention spec.js
+'@playwright/test' should be imported with test and expect for testing and validation
+Use let, var or constant
+//const { test, expect } = require('@playwright/test');
+
+test structure
+
+test.describe('Test Case Title', () => {
+// test actions and validation
+});
+
+where () is anonymus Functional
+{page} is the fixture passed to anonymus function using which various operations can be performed
+in anonymus function we have to pass asynch
+and infront of test line Await.
+JS is asynronous programming language
+Execution is not based on step by step i.e it will not depend on previous step
+to make next step to depend on previous step we have to make use of Java script promice
+async function makes function to return promoice and await will wait for the promice
+Every command in program will wait and excute after page is loaded
+
+npx playwrght test -- all tests in headless in all browsers
+
+npx playwrght test BasicTest.spec.js -- particular test case file
+
+npx playwrght test BasicTest.spec.js --project = Chromium -- to execute in specific browser
+
+
+npx playwrght test BasicTest.spec.js --project = Chromium --headed
+
+npx playwrght test BasicTest.spec.js --project = Chromium --headed--debug
+
+npx playwright show-report -- to open report

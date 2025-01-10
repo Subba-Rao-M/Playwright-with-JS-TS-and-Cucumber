@@ -1,0 +1,33 @@
+https://playwright.dev/docs/test-assertions
+
+Assertions:
+
+expect(page).toHaveURL('url given'); -- > to check the url
+
+expect(page).toHaveTitle(''); -- > To check the page title
+
+expect(locator).toBeVisible(); -- TO check if the element is visible or not
+
+expect(locator).toBeEnabled(); -- TO check element is enabled or not
+expect(locator).toBeDisabled(); -- TO check element is disabled or not
+
+expect(locator).toBeChecked(); -- TO verify radio button or checkbox is checked
+
+expect(locator).toHaveAttribute(); -- TO check if the element has attribute or not
+expect(registerbutton).toHaveAttribute('type','submit'); -- where we are checking element has attribute type with value submit
+
+
+element(locator).toHaveText() -- TO check exact match for value
+element(locator).toContainText() -- TO check partial value based on available text
+
+element(locator).toHaveValue(value) -- To check if the input field has value or not
+
+element(locator).toHaveCount();
+
+for negation validation you can use in format element(locator).not.toHaveCount();
+
+Hard Vs Soft Assertions
+Hard Asserions - Code will be terminated if any step in test case is failed
+SOft Assertions - Code will not terminate and will continue with next step
+Syntax for soft assertions:
+await expect.soft(page).toHaveTitle('value');

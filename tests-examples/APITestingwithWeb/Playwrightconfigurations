@@ -1,0 +1,79 @@
+1. Any number of playwright configuration files can be created
+
+to run script using custom configuration files
+npx playwrgiht test filename.spec.js --config playwright_origin.config.js
+
+Instead of running like above same playwright config file can be updated to support multiple configurations using projects options and n number of projects can be created
+
+projects: [
+    Enter configurations here
+    name: project name
+    use: configuration for this project
+]
+
+npx playwrgiht test filename.spec.js --config playwright_origin.config.js --pjoject=projectname
+
+/*** USE Properites ***
+view port - in what size browser should be opened using width and height to test web responsiveness when opening browser in different resolutions ex: 720 x 720
+
+...devices[] - emulate device type given to test -- tweeks the behaviour of selected device dimention 
+
+ignorehttpserror - to bypass ssl error
+permission : to allow permissions like google geo locations
+video - only on failure
+traces - logs for test cases - only for failed one
+
+
+***  USE Properties END ***
+
+*** config properites ***
+retries - to rerun failed test cases automcatically, number 1 , 2, etc to retri number of times
+in report retried test case displayed with trigange yellow image and flaky tag is marked for that test case
+
+Parallel execution:
+Test files will run in parallel mode by default
+Test cases in individual test spec file will run sequentially
+ 5 workers by default used for parallel execution and i.e 5 files will be opened in different browsers
+
+workers : to configure other values if less than 5 required
+
+To run the tests from same file in parallel mode: 
+in test spec.js file add below code above test methods
+test.describe.configure({mode: 'paralle'});
+
+//If the test depends on previous test case make sure test runs in serial mode explicitly if explicitly specified first test case failure will skip remaining test cases run in file
+
+*** config properites ***
+
+Tagging the test cases: in the test case title add @Web, @API, @smoketest, @regressiontest, etc
+npx playwright test --grep Web
+
+
+npx playwright test --list to list all test files
+
+Reporters:
+
+In configure option reporter : is used to set the required reports
+
+Allure report is not defaultly available with playwright
+Install using command npm install -D allure-playwright
+and run the test case using npx playwright test --reporter=line,allure-playwright
+also in playwright custom properties add
+
+export default defineConfig({
+  reporter: [["line"], ["allure-playwright"]],
+});
+
+ npx playwright test --grep Web --reporter=allure-playwright
+ allure results folder is generated and now run the command 
+
+ allure generate ./allure-results --clean
+ above will consolidate all results and generate clean report in allure-report folder
+
+ Now to open the report run the command
+
+ allure open ./allure-report
+
+npx playwright test --grep Web --reporter=allure-playwright
+allure generate ./allure-results --clean
+allure open ./allure-report

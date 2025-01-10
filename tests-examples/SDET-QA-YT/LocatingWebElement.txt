@@ -1,0 +1,40 @@
+Locating Web ELements:
+Propety of elements, CSS, XPATH
+
+
+Locate SIngle element:
+
+Link or Button
+syntax: await page.locator('locator identified').action();
+or await page.action(locator);
+
+Fill: input box
+
+await page.type('Locator', 'value');
+await page.fill('Locator', 'value');
+await page.locator('locator').fill('value');
+await page.locator('locator').type('value');
+
+Locating multiple web elements
+const elements = await page.$$(locator);
+
+page. waitforselector is used to load all element properties before performing actions
+
+
+Built IN Locators: https://playwright.dev/docs/locators
+
+page.getByRole() to locate by explicit and implicit accessibility attributes. -- WHeever action can be performed like on input boxes, link, button, etc
+   await page.getByRole('button', {type: 'submit'}).click(); where type submit is attibute of button
+page.getByText() to locate by text content.
+page.getByLabel() to locate a form control by associated label's text. -- in field atribute check for label tag
+page.getByPlaceholder() to locate an input by placeholder.
+page.getByAltText() to locate an element, usually image, by its text alternative.
+page.getByTitle() to locate an element by its title attribute.
+page.getByTestId() to locate an element based on its data-testid attribute (other attributes can be configured). data-setid parameter value attribute can be used to locate element
+
+
+Record and Play Script
+npx playwright CodeGen
+npx playwright codegen --help
+npx playwright codegen -o tests/mytest.spec.js
+stop recording and use pick locator option to pick other element properties
