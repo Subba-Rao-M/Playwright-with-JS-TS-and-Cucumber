@@ -1,12 +1,12 @@
 // @ts-check
 const { devices, expect } = require('@playwright/test');
-const { timeout } = require('./playwright_orign.config');
+const { timeout, workers } = require('./playwright_orign.config');
 
 
 
 const config = ({
   //testDir: './tests',
-  testDir: './tests-examples/AIDrivenTesting',
+  testDir: './tests',
   reporter: 'html',
   /* Time out for entire test */
   timeout: 50*1000,
@@ -18,11 +18,12 @@ const config = ({
 
   use: {
 
-    headless: false,
+    headless: true,
     screenshot: 'on',
     trace: 'retain-on-failure',
     reporter: 'html',
-    viewport: { width: 1920, height: 1080 }
+    viewport: { width: 1920, height: 1080 },
+    workers: 1
   },
   projects: [
     {
