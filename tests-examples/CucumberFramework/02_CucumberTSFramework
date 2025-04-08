@@ -1,0 +1,27 @@
+Node.js Project Initialization
+
+Initialized using npm init -f
+
+Playwright Installation : Installed using npm init playwright@latest
+
+Cucumber Installation : Installed using npm install -D @cucumber/cucumber
+
+TypeScript Node Installation: Installed using npm install -D ts-node
+
+Project Structure Setup
+
+Created folders: src/tests/features, src/tests/step-definitions
+Feature File Creation : Created src/tests/features/login.feature with a login scenario
+
+TypeScript Configuration : Configured tsconfig.json with ES2020 target, CommonJS module, and strict mode
+
+Cucumber Configuration : Configured cucumber.json with paths, dry-run option "Cucumber.features" : ["src/tests/features"],
+    "Cucumber.glue": [
+        "src/tests/step-definitions/*.ts"
+    ]
+   , and format options. 
+In visual studio , go to settings, check for cucumber settings and add 
+
+Cucumber Report Formats : Configured in config/cucumber.js to generate JSON and HTML reports
+
+Git Ignore Setup: Configured .gitignore to exclude node_modules, test results, and reports
