@@ -1,0 +1,25 @@
+/*****
+ * Install github copilot and github chat extensions in vscode
+ * Sin in using github account
+ * Github copilot is not open source, it is a paid service check for free trial
+ * Provide relavant prompt to generate or update the codes
+ * Give suggested format and generate remaining files in same format
+ * 
+ * 
+ * MCP - Model context protocal
+ * playwright released mcp to support exposed methods
+ * so the description provided in plain english language is read
+ * ai model figures it out and it checks if the integrated MCP model available
+ * if yes then convert it to action 
+ * To make this possible configure mcp server
+ * 
+ * Use AI agent mode to create the test cases and execute it
+ * Select settings X in github copilot chat section
+ * Add more tools - Add MCP server
+ * Select npm package
+ * Enter @playwright/mcp and continue
+ * and select local server
+ * IN git hub switch from ask mode to agent mode
+ * MCP requires permission for each action, give step specific or session specific permission
+ * To run the test generated say run this test
+ */
