@@ -7,8 +7,8 @@ test.describe('WCAG 2.1 AA Accessibility Tests', () => {
         await page.goto('https://rahulshettyacademy.com/seleniumPractise/#/');
 
         const accessibilityScanResults = await new AxeBuilder({ page })
-            // .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
-            .withTags(['wcag2aa'])
+            .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+           // .withTags(['wcag21aa'])
             .analyze();
         await testInfo.attach("accessibility-scan-results", {
 
@@ -20,11 +20,11 @@ test.describe('WCAG 2.1 AA Accessibility Tests', () => {
     });
 
     test('Check accessibility compliance on Offers Page', async ({ page }) => {
-        await page.goto('https://rahulshettyacademy.com/seleniumPractise/#/offers');
-
+        //await page.goto('https://rahulshettyacademy.com/seleniumPractise/#/offers');
+        await page.goto('https://www.axisbank.com/');
         const accessibilityScanResults = await new AxeBuilder({ page })
-            // .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
-            .withTags(['wcag2aa'])
+            .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+           // .withTags(['wcag2aa'])
             .analyze();
         expect(accessibilityScanResults.violations).toEqual([]);
     });
@@ -34,8 +34,8 @@ test.describe('WCAG 2.1 AA Accessibility Tests', () => {
         await page.goto('https://www.onlinesbi.sbi/');
 
         const accessibilityScanResults = await new AxeBuilder({ page })
-            // .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
-            .withTags(['wcag2aa'])
+             .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+            //.withTags(['wcag21aa'])
             .analyze();
         expect(accessibilityScanResults.violations).toEqual([]);
     });
