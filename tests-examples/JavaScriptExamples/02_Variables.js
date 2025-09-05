@@ -31,5 +31,28 @@ console.log(!required);
 
 //const value is constant - it cannot be re-assinged and re-delcared
 const d= 10;
-d=300;
+d=300; //error - Assignment to constant variable.
 console.log(d);
+
+//Difference between == and ===
+let num1 = 5;  
+let num2 = '5';
+if(num1 == num2) {  //true - checks only value i.e Visual equality
+    //Example scenario : fetch numeric value from table(received as string) and compare it with input value
+    console.log("Equal");
+}   
+
+if(num1 === num2) {  //false - checks value and type
+    //Example actual text from application with expected string value
+    console.log("Equal");
+}
+
+
+//Differenfce between null and undefined
+let p;  //undefined - variable declared but not assigned any value
+console.log(p);
+console.log(typeof(p));     
+
+let q = null;  //null - variable declared and assigned with null value
+console.log(q);
+console.log(typeof(q));  //object - this is a bug in javascript, it should return null02
