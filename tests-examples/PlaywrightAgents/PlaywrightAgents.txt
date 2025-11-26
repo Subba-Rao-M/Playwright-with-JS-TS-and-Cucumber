@@ -1,0 +1,38 @@
+Playwright agents exlore application to prepare test plan, to generate test scripts based on plan and update the test scripts if any test scripts failures
+
+Playwright agent has 3 components:
+Planner
+Generator
+Healer
+
+These 3 components work independently and also interconnected
+
+Human intervention required to make sure above matches with business requrirement
+
+Run command npx playwright init-agents --loop=vscode to install agents
+
+.github/chatmodes/ folder creates chatmod.md files specific to above 3 agents
+
+.vscode/mcp.json updated
+
+new file tests\seed.spec.ts is created
+
+If test plan need to be created for specific page, some predefined step needs to be written in seed file
+first seed file will be checked and control will come to particular page to create test plan for particulat page
+
+Select the seed file in planner mode and enter text like below to create new test plan
+
+explore tha app and create test plan for https://rahulshettyacademy.com/seleniumPractise/#/
+
+planner will interact with browser and open url and check if any steps in seed file and 
+generate test plan based on UI page loaded
+also add business requirement document to provide more details
+file will be created under tests folder
+
+If page wise requirement given it performs better job
+
+Now the change the agent role to generator
+
+healer agent can repair the test cases which are failed to execute.
+
+Give test case details which are failing and ask it to fiz

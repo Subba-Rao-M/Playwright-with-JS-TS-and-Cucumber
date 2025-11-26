@@ -27,7 +27,7 @@
  * in Azure create pipeline using repo and yml fie created in repo
  * Update the playwright service url as variable
  * run the pipeline
- * 1step install dependencies
+ * 1 step install dependencies
  * 2 - run the code
  * 3. reports
  * 

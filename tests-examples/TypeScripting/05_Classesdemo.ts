@@ -10,7 +10,7 @@ export class o5_Classesdemo { // export is used in type script in place of modul
     cart: Locator;
     orders: Locator;
     checkout: Locator;
-    constructor(page) {
+    constructor(page: Page) {
         this.page = page;
         this.cartProducts = page.locator("div li").first();
         this.productsText = page.locator(".card-body b");
@@ -20,7 +20,7 @@ export class o5_Classesdemo { // export is used in type script in place of modul
 
     }
 
-    async VerifyProductIsDisplayed(productName) {
+    async VerifyProductIsDisplayed(productName : string) {
 
         await this.cartProducts.waitFor();
         const bool = await this.getProductLocator(productName).isVisible();
@@ -32,7 +32,7 @@ export class o5_Classesdemo { // export is used in type script in place of modul
         await this.checkout.click();
     }
 
-    getProductLocator(productName) {
+    getProductLocator(productName: string) {
         return this.page.locator("h3:has-text('" + productName + "')");
     }
 
