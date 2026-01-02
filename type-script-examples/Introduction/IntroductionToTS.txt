@@ -1,0 +1,82 @@
+Playwright is open Source tool by microsoft for web browser testing
+Supports API testing for web and mobile browser testing
+playwright is a framework for automating web application which enables end to end testing
+Selenium is not a framework and its a library. Selenium uses testng as framework
+playwright offers a dedicated api for testing api
+playwright is open source node js library
+node js is run time environment for java script
+
+Node.js is open source cross platform java script run time environment
+that executes java script outside of web browser
+
+
+Features:
+Multiple/ Cross browsers - Chromium(Chrome, Edge), webkit(Safari), Firefox
+Cross Platform / OS - Windows, Linux, MAC
+Multiple languages: Typescript, Java script, Python, Java, C#
+Supports mobile web testing in android(chrome) and ios(safari)
+includes built in api testing and also supports back end api testing
+
+
+Automatic waiting - Auto wait for synronization problem to reduce flakyness while performing test actions by making elements ready
+Complex web elements like shadow dom elements, iframes can be easily integrated
+
+Helps in running test cases in parallel(like testng in selenium) in multiple browser instances helps in faster execution
+
+Reporting : Builtin report with screenshot and video embedded. Also supports 3rd party reports integration supported like allure
+
+Inspector: Helps debug tests showing click points and verifying locators in real time
+
+CodeGen - The codegen tool records your actions on web application and converts it into test scripts in selected supported language
+
+Trace Viewer - captures screnshots, videos for execution steps, retries flaky test and captutes logs. Captures all information required to trace failures.
+
+Supports Accessibility and Visual Testing
+
+Java Script is dynamically typed language
+
+let age = 30;
+let name = "Subba"
+
+age = "thirty" // allowed in java script or python
+
+Type Script is statically typed language
+
+let age : number = 30;
+let name : string = "Subba"
+
+age = "thirty" // Not allowed
+
+Why TypeScript:
+Java Script(ES3,4,5, ES6) - ECMA Script - Compliance / standards followed by java script
+Typescript is superset of java script, to allow user to additional features above Typescript
+microsoft can add new featues as long as it generated compiled  java script which complies with ECMA standards
+
+
+It complies(converts) into java script and runs wherever java script runs
+TypeScript complier converts .ts file into .js file
+Java script runs in browser, node.js or any java script environment
+All Java script is valid typescript code
+Type script provides additional type for variables and provides type safery as data type is not changed
+Error will be captured during compile time in typescript
+
+Install Node js,
+check node -v for checking version or use --version
+setup path for old windows version
+npm - node package manager - by default instaled with node and used to install other node supported packages
+npm -v - to check npm version
+
+Typescript complier
+npm install -g typescript
+
+to run the type script directly install type script executor
+
+npm install -g tsx
+
+VS Code editor
+
+
+
+
+
+

@@ -4,10 +4,21 @@
   "main": "index.js",
   "scripts": {
     "regression": "npx playwright test",
-    "webtesting": "npx playwright test --grep @Web",
-    "apitesting": "npx playwright test --grep @API",
+    "webtesting": "npx playwright test --grep @web",
+    "apitesting": "npx playwright test --grep @api",
     "originconfigtest": "npx playwright test --config playwright_orign.config.js",
-    "CucumberFeaturesTest": "npx cucumber-js --retry 1 --exit --format html:cucumber-report.html"
+    "CucumberFeaturesTest": "npx cucumber-js --retry 1 --exit --format html:cucumber-report.html",
+
+    "master": "playwright test --grep @master",
+
+
+    "test:sanity": "playwright test --grep @sanity",
+    "test:regression": "playwright test --grep @regression",
+    "test:datadriven": "playwright test --grep @datadriven",
+    "test:master:headed": "playwright test --grep @master --headed",
+    "test:sanity:debug": "playwright test --grep @sanity --debug",
+    "test:opencart": "playwright test --grep @opencart",
+    "test:ecart": "playwright test --grep @ecart"
   },
   "keywords": [],
   "author": "",
@@ -19,10 +30,13 @@
     "@playwright/test": "^1.56.1",
     "@types/node": "^22.10.1",
     "@zerostep/playwright": "^0.1.5",
-    "allure-playwright": "^3.0.7"
+    "allure-playwright": "^3.4.3"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.10.1",
-    "exceljs": "^4.4.0"
+    "@faker-js/faker": "^9.9.0",
+    "csv-parse": "^6.1.0",
+    "exceljs": "^4.4.0",
+    "xlsx": "^0.18.5"
   }
 }
