@@ -51,7 +51,7 @@ export default defineConfig({
    {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-      fullyParallel: false,
+      //fullyParallel: false,
       workers: 4,
     },
  /*

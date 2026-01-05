@@ -42,7 +42,7 @@ test.skip('Another  anonymous Test Case', async ()=>
 }
 );
 
-test.only('Browser context declaration', async ({browser})=>
+test('Browser context declaration', async ({browser})=>
     {
         const context = await browser.newContext() // Creates new browser instanace with required context options
         //Now browser context will give new page
@@ -52,7 +52,7 @@ test.only('Browser context declaration', async ({browser})=>
     }
     );
 
-test.only('Page fixture Test with default browser context', async ({page})=>
+test('Page fixture Test with default browser context', async ({page})=>
         {
            //if there is no additional information to pass to browser context direclty use page fixture
            //page fixture internally calls defaut browser context

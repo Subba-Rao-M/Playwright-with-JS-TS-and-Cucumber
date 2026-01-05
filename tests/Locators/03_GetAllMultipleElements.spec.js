@@ -5,7 +5,7 @@ const {test, expect}= require('@playwright/test');
  * 
  * 
  */
-test.only('Test multiple value return based on locators', async ({page})=>
+test('Test multiple value return based on locators', async ({page})=>
     {
         //Re-usable locators
         const username = page.locator('#username');

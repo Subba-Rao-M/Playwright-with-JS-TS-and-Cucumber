@@ -7,3 +7,7 @@ node_modules/
 /allure-results/
 /features/Screenshots/
 /cucumber-report.html/
+*.png
+**/screenshots/
+**/Screenshots/
+**/VisualTesting.spec.ts-snapshots/

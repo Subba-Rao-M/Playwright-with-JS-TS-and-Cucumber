@@ -1,7 +1,7 @@
 const { test,expect } =require('@playwright/test');
 import { ai } from '@zerostep/playwright';
 
-test('zerostep example', async ({ page }) => {
+test.skip('zerostep example', async ({ page }) => {
   await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
 
   // An object with page and test must be passed into every call

@@ -1,13 +1,14 @@
 const { Before, After, BeforeStep, AfterStep, Status} = require('@cucumber/cucumber');
-const {POManager} = require('../../pageobjects/POManager');
+const {POManager} = require('../../ECartFramework_JS/pageobjects/POManager');
 const playwright = require('@playwright/test');
 
 Before(async function(){
     console.log("Before Scenario : *** SetUp codes add here for adding cookies,data,etc***");
      const browser = await playwright.chromium.launch({
-            headless: false
+            headless: true
         });
-        const context = await browser.newContext();
+        const context = await browser.newContext(
+        );
         this.page = await context.newPage();
         this.poManager = new POManager(this.page);
 });

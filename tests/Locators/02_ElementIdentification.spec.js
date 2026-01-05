@@ -20,7 +20,7 @@ const {test, expect}= require('@playwright/test');
  * Use selectorshub or chropath plugin
  */
 
-test.only('Test interaction with text field, buttons and page texts', async ({page})=>
+test('Test interaction with text field, buttons and page texts', async ({page})=>
     {
         await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
         await expect(page).toHaveTitle("LoginPage Practise | Rahul Shetty Academy");
