@@ -22,7 +22,7 @@ import { test, expect } from "@playwright/test"
 import {faker} from "@faker-js/faker"
 import {DateTime} from 'luxon';
 
-
+test.use({baseURL: 'https://restful-booker.herokuapp.com'});
 
 test("Create Post request using json file body", {tag: ['@booking', '@api']}, async({ request }) => {
 

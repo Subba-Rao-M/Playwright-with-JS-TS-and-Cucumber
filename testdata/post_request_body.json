@@ -4,8 +4,8 @@
     "totalprice": 1000,
     "depositpaid": true,
     "bookingdates": {
-        "checkin": "2025-07-01",
-        "checkout": "2025-07-05"
+        "checkin": "2026-02-01",
+        "checkout": "2026-02-05"
     },
     "additionalneeds": "super bowls"
 }

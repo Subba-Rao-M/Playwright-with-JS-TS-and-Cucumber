@@ -11,6 +11,8 @@ Add url to playwright.config.ts file
 
 import { test, expect } from "@playwright/test"
 
+test.use({baseURL: 'https://restful-booker.herokuapp.com'});
+
 test("Create Post request using static body", {tag: ['@booking', '@api']}, async ({ request }) => {
 
     //request body

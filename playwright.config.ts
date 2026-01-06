@@ -45,7 +45,7 @@ export default defineConfig({
     video: 'retain-on-failure',
 
     //For API testing module/test cases
-    baseURL: 'https://restful-booker.herokuapp.com'
+    //baseURL: 'https://restful-booker.herokuapp.com'
 
   },
 
