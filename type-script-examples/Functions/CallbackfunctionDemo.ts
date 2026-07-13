@@ -2,7 +2,7 @@
  * Callback function -> function itself as argument
  * not important for automation
  * callback function is passed as parameter to another function and executed later
- * used when the function wants to execute after executin another function
+ * used when the function wants to execute after executing another function
  * to solve asynhronous nature of solving problem
  * Syntax:
  * 
@@ -21,7 +21,7 @@
  * 
  */
 
-function greets(uname: string, clbfun: (message: string)=> void){
+function greets(uname: string, clbfun: (message: string) => void) {
     console.log(uname);
     clbfun("hello");
 
@@ -37,13 +37,13 @@ greets("Scott", showMessage)
 
 //Example 2
 
-function calc(va1: number, va2: number, disRes:(res: number)=> void){
-    let res = va1+va2;
+function calc(va1: number, va2: number, disRes: (res: number) => void) {
+    let res = va1 + va2;
     disRes(res);
 }
 
 
-function disRes(result: number): void{ // returns void, based on this return type update above return type for call back function
+function disRes(result: number): void { // returns void, based on this return type update above return type for call back function
     console.log("Result is : ", result)
 }
 

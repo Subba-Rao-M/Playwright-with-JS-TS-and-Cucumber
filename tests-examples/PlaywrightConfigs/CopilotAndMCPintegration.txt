@@ -1,6 +1,6 @@
 /*****
  * Install github copilot and github chat extensions in vscode
- * Sin in using github account
+ * Sign in using github account
  * Github copilot is not open source, it is a paid service check for free trial
  * Provide relavant prompt to generate or update the codes
  * Give suggested format and generate remaining files in same format

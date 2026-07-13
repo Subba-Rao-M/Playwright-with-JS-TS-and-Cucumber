@@ -27,7 +27,7 @@ export class ProductPage {
      * @param qty - Quantity to set
      */
     async setQuantity(qty: string): Promise<void> {
-        await this.txtQuantity.fill('');
+        //await this.txtQuantity.fill('');
         await this.txtQuantity.fill(qty);
     }
 

@@ -1,4 +1,4 @@
-const {test, expect}= require('@playwright/test');
+const { test, expect } = require('@playwright/test');
 
 //from playwright test jar available in node_modules import test
 /**
@@ -11,8 +11,7 @@ const {test, expect}= require('@playwright/test');
  */
 
 
-test.skip('First Test Case', async function()
-{
+test.skip('First Test Case', async function () {
 
     //playwright test line 1
     // test line 2
@@ -36,59 +35,56 @@ test.skip('First Test Case', async function()
 
 );
 
-test.skip('Another  anonymous Test Case', async ()=>
-{
+test.skip('Another  anonymous Test Case', async () => {
     //Write steps with await here
 }
 );
 
-test('Browser context declaration', async ({browser})=>
-    {
-        const context = await browser.newContext() // Creates new browser instanace with required context options
-        //Now browser context will give new page
-        const page = await context.newPage();
-        await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
-        await expect(page).toHaveTitle("LoginPage Practise | Rahul Shetty Academy");
-    }
-    );
+test('Browser context declaration', async ({ browser }) => {
+    const context = await browser.newContext() // Creates new browser instanace with required context options
+    //Now browser context will give new page
+    const page = await context.newPage();
+    await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
+    await expect(page).toHaveTitle("LoginPage Practise | Rahul Shetty Academy");
+}
+);
 
-test('Page fixture Test with default browser context', async ({page})=>
-        {
-           //if there is no additional information to pass to browser context direclty use page fixture
-           //page fixture internally calls defaut browser context
-            await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
-            await expect(page).toHaveTitle("LoginPage Practise | Rahul Shetty Academy");
-    
-        }
-        );
+test('Page fixture Test with default browser context', async ({ page }) => {
+    //if there is no additional information to pass to browser context directly use page fixture
+    //page fixture internally calls defaut browser context
+    await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+    await expect(page).toHaveTitle("LoginPage Practise | Rahul Shetty Academy");
 
-        /**
-         * Understanding the default playwright configuration file
-         * const config is an onbject
-         * config object has different properties
-         * testDir = where all the test cases are placed
-         * use object- property is used by all test cases
-         * 
-         * 
-         */
+}
+);
 
-        /**
-         * running test npx playwright test
-         * in node module check playwright and run test command
-         * by default headeless mode is used
-         * To run in headed mode - npx playwright test --headed
-         * browser will close automatically
-         * To execure single test case from file
-         * test.only
-         * To skip the test cases
-         * test.skip
-         * 
-         * npx playwright test --ui
-         * test runner window will open to execute the test cases
-         * 
-         * npx playwright test testname.spec.js --debug 
-         * to run the test in debug mode
-         * 
-         * 
-         * 
-         */
+/**
+ * Understanding the default playwright configuration file
+ * const config is an object
+ * config object has different properties
+ * testDir = where all the test cases are placed
+ * use object- property is used by all test cases
+ * 
+ * 
+ */
+
+/**
+ * running test npx playwright test
+ * in node module check playwright and run test command
+ * by default headeless mode is used
+ * To run in headed mode - npx playwright test --headed
+ * browser will close automatically
+ * To execure single test case from file
+ * test.only
+ * To skip the test cases
+ * test.skip
+ * 
+ * npx playwright test --ui
+ * test runner window will open to execute the test cases
+ * 
+ * npx playwright test testname.spec.js --debug 
+ * to run the test in debug mode
+ * 
+ * 
+ * 
+ */

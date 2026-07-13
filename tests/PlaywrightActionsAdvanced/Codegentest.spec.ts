@@ -1,11 +1,11 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
 /**
  * Using codegen we can record the test and generate code
  * It can be used to identify the locator value
  * used for debug of tests
  * In terminal write npx playwright codegen
- * To save code generated to file automaticallu
+ * To save code generated to file automatically
  * npx playwright codegen -o tests/foldername/filename.spec.ts
  *  - o or --output
  * Check for assert icons present in recorder window to add assertions

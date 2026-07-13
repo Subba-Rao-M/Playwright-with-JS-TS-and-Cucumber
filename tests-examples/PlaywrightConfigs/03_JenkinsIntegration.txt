@@ -17,5 +17,21 @@
  * select value from drop down
  * View the console for triggered values
  * To create with allure report add the new value with details to generage
+
+Jenkins Plugin - Install
+Allure Jenkins Plugin
+Git and Github related Plugin
+Pipeline Plugin
+Node js plugin
+
+Jenkins Tools:
+Set paths for node js, git, github
+If automatically set, no need path
+Specify allure commandline installation
+
+In jenkins job add post build actions select allure report
+
+
+
  * 
  */

@@ -1,8 +1,14 @@
 This project includes learning on playwright
 - Java Script Basics
+- Type Script Basics
 - Playwright locators and commands usage
-- Creating framework using page object model
+- Creating framework using page object model using JS
 - Updating the existing java script to type script
 - Adding a layer of cucumber-js to create scenarios and step definition using existing code
 - Reports builtin and integrating allure report
-- Jenkins integration
+- Jenkins, Github actions integration
+- Visual Testing
+- Using playwright MCP with AI
+- Data Driven Testing and Parallel Testing
+- API Testing and Mocking the network API for edge cases
+- 

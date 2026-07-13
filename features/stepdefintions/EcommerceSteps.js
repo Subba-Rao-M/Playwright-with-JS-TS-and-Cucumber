@@ -10,13 +10,13 @@ Given('User login to application using {string} and {string}', {timeout: 100*300
     await loginPage.validLogin(username, password);
 });
 
-When('user adds product {string} to cart',  {timeout: 100*3000},  async function (productName) {
+When('user adds product {string} to cart',  async function (productName) {
     this.dashboardPage = this.poManager.getDashboardPage();
     await this.dashboardPage.searchProductAddCart(productName);
     await this.dashboardPage.navigateToCart();
 });
 
-Then('verify {string} is displayed in cart', {timeout: 100*3000},  async function (productName) {
+Then('verify {string} is displayed in cart', async function (productName) {
     const cartPage = this.poManager.getCartPage();
     await cartPage.VerifyProductIsDisplayed(productName);
     await cartPage.Checkout();
