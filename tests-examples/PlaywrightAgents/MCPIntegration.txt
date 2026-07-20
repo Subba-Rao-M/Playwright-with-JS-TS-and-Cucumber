@@ -102,3 +102,16 @@ Create the context file to create test cases and excute it in application specif
 Refer the context files or existing files in copilot as reference to generate other test cases in same format
 
 
+**
+Copilot /Cluade Agent - > natural language - >  MCP tools - > AI agent will load entire dom to identify element
+entire page is loaded to ai context which exceeds token Limitations, more token consumption increases price of usage
+
+CLI
+Copilot /Cluade Agent - > natural language - >  Skills document - example snapshot downloads a11y tree and places in project repository
+searches within downloaded file(yml file)
+
+if page changes dynamically then cli will not be best option have to use mcp
+install npm cli package
+install playwright cli skills (refer for .claude folder)
+refer for skills file and references file
+Give manual steps to claude and run test case and generate test case for the same
